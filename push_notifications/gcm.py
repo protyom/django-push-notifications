@@ -146,6 +146,7 @@ def _cm_send_request(
 	payload.update({
 		k: v for k, v in kwargs.items() if v and (k in FCM_TARGETS_KEYS or k in FCM_OPTIONS_KEYS)
 	})
+	print('payload is ', payload)
 
 	# Sort the keys for deterministic output (useful for tests)
 	json_payload = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode("utf-8")
