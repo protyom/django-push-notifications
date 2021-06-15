@@ -150,6 +150,7 @@ def _cm_send_request(
 
 	# Sort the keys for deterministic output (useful for tests)
 	json_payload = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode("utf-8")
+	print('json_payload is ', json_payload)
 
 	# Sends requests and handles the response
 	if cloud_type == "GCM":
